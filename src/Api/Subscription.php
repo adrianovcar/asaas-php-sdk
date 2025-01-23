@@ -217,7 +217,7 @@ class Subscription extends AbstractApi
     {
         try {
             $current_subscription = $this->getById($subscription_id);
-        } catch (Exception) {
+        } catch (Exception $e) {
             throw new Exception('Subscription not found', 404);
         }
 
